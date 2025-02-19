@@ -1,7 +1,46 @@
----
 layout: page
-title: "核心能力"
+title: "核心能力 | e空间产品能力平台"
 description: "数字化服务｜游览服务升级｜互动空间服务"
-header-img: "img:new-bg.jpg"
+header-img: "img/new-bg.jpg"  # 修正路径符号
 header-mask: 0.3
 multilingual: true
+
+SEOTitle: "e空间 | 中电信文宣科技"
+keywords: "数智人，伴游讲解，线上空间，虚拟互动，智慧文旅"
+url: "https://your-domain.com"  # 替换为实际域名
+baseurl: ""
+email: zdxwx@189.com
+
+langs: [zh, en]
+exclude_from_localizations: ["js", "css", "img"]
+
+capabilities:
+  - title: 数字孪生景区
+    icon: /img/icons/ar.svg
+    desc: 基于5G+AI的实时三维建模技术，实现景区全要素数字化
+  - title: 智能导览系统
+    icon: /img/icons/guide.svg
+    desc: 融合LBS与AR技术的个性化游览路线推荐
+  - title: 元宇宙互动空间
+    icon: /img/icons/metaverse.svg
+    desc: 支持千人并发的虚拟会展与数字人社交系统
+    ---
+
+{%- if site.multilingual -%}
+<!-- 多语言切换组件 -->
+<div class="lang-switch">
+  {%- for lang in site.langs -%}
+    <a href="{{ site.baseurl }}/{{ lang }}" class="{{ lang }}"></a>
+  {%- endfor -%}
+</div>
+{%- endif -%}
+
+<section class="capability-grid">
+  {%- for item in page.capabilities -%}
+  <div class="capability-card">
+    <img src="{{ item.icon }}" alt="{{ item.title }}">
+    <h3>{{ item.title }}</h3>
+    <p>{{ item.desc }}</p>
+  </div>
+  {%- endfor -%}
+</section>
