@@ -88,6 +88,9 @@ service-worker: true
 # MathJax rendering for layout:page (e.g. post preview)
 page-mathjax: false
 
+<video controls width="100%">
+  <source src="videodemo.mp4" type="video/mp4">
+
 # Friends
 friends:
   [
